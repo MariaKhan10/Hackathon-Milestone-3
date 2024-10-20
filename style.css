@@ -1,6 +1,6 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #c0d9f5;
+    background-color: #3265a0;
     margin: 0;
     padding: 0;
 }
@@ -8,7 +8,7 @@ body {
 .container {
     max-width: 960px;
     margin: 40px auto;
-    background: #dde4eb;
+    background: #aebfcf;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
@@ -104,4 +104,3 @@ button:hover {
     margin: 5px 0;
     color: #555;
 }
-
