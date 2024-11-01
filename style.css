@@ -7,37 +7,54 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background: linear-gradient(135deg, #263b61, #cfdef3);
-    color: #2c3e50;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    padding: 20px;
 }
 
 .container {
-    max-width: 800px;
-    margin: 2rem;
-    background: white;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    max-width: 1000px;
+    width: 100%;
+    background: #f7f9fc; /* Softer white for a cleaner look */
+    padding: 40px;
+    border-radius: 12px; /* Increased radius for a modern look */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+}
+
+input:focus {
+    border-color: #1e90ff; /* Highlight color */
+    box-shadow: 0 0 5px rgba(30, 144, 255, 0.2); /* Subtle shadow on focus */
+    outline: none;
+}
+
+input[type="text"]:hover, input[type="email"]:hover, input[type="tel"]:hover, input[type="file"]:hover {
+    border-color: #1e90ff;
+    box-shadow: 0 0 5px rgba(30, 144, 255, 0.2);
 }
 
 h1 {
-    font-size: 2.5rem;
-    color: #007bff;
+    text-decoration: underline;
+    color: #152c46;
     text-align: center;
-    margin-bottom: 1rem;
-    font-weight: 700;
+    background: linear-gradient(to right, #1e90ff, #00bfff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3rem; /* Slightly larger for impact */
+   
 }
 
 h2 {
     color: #007bff;
-    font-size: 1.5rem;
-    margin-top: 1.5rem;
-    border-bottom: 2px solid #007bff;
-    padding-bottom: 0.5rem;
+    text-align: center;
+    font-size: 1.75rem;
+    margin-bottom: 25px; /* More spacing for better visual separation */
+    text-decoration: underline;
 }
 
 label {
@@ -85,6 +102,7 @@ button:hover {
     background-color: #0056b3;
 }
 
+/* Resume Preview Styling */
 .resume-container {
     margin-top: 2rem;
     padding: 1.5rem;
@@ -92,19 +110,23 @@ button:hover {
     border-radius: 8px;
     background-color: #f5f6fa;
     font-family: 'Roboto', sans-serif;
+    color: #2c3e50;
 }
 
+/* Header for resume */
 .resume-header {
     display: flex;
     align-items: center;
     margin-bottom: 1.5rem;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 1rem;
 }
 
 .resume-header img {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-    margin-right: 1rem;
+    margin-right: 1.5rem;
 }
 
 .resume-header h3 {
@@ -112,8 +134,19 @@ button:hover {
     color: #007bff;
 }
 
+.resume-header p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #2c3e50;
+}
+
+/* Each section of the resume */
 .resume-section {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 .resume-section h4 {
@@ -127,4 +160,63 @@ button:hover {
 .resume-section p {
     font-size: 1rem;
     color: #636e72;
+    line-height: 1.6;
+    margin: 0.5rem 0;
+}
+
+/* Styling for form sections and items */
+.section {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.education-item,
+.experience-item,
+.skills-item {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+/* Styling for year fields below main input */
+.education-year,
+.experience-year {
+    margin-top: 0.5rem;
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #dfe6e9;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #34495e;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        margin: 1rem auto;
+        padding: 1.5rem;
+    }
+
+    .resume-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .resume-header img {
+        margin: 0 0 1rem 0;
+    }
+
+    .education-item,
+    .experience-item {
+        display: block;
+    }
+
+    .education-year,
+    .experience-year {
+        text-align: left;
+    }
 }
