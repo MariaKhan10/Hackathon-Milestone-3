@@ -19,16 +19,16 @@ body {
 .container {
     max-width: 1000px;
     width: 100%;
-    background: #f7f9fc; /* Softer white for a cleaner look */
+    background: #f7f9fc;
     padding: 40px;
-    border-radius: 12px; /* Increased radius for a modern look */
+    border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     margin: 1rem;
 }
 
 input:focus {
-    border-color: #1e90ff; /* Highlight color */
-    box-shadow: 0 0 5px rgba(30, 144, 255, 0.2); /* Subtle shadow on focus */
+    border-color: #1e90ff;
+    box-shadow: 0 0 5px rgba(30, 144, 255, 0.2);
     outline: none;
 }
 
@@ -45,15 +45,14 @@ h1 {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 3rem; /* Slightly larger for impact */
-   
+    font-size: 3rem;
 }
 
 h2 {
     color: #007bff;
     text-align: center;
     font-size: 1.75rem;
-    margin-bottom: 25px; /* More spacing for better visual separation */
+    margin-bottom: 25px;
     text-decoration: underline;
 }
 
@@ -76,12 +75,6 @@ input[type="file"] {
     border-radius: 5px;
     font-size: 1rem;
     color: #34495e;
-}
-
-input[type="text"]::placeholder,
-input[type="email"]::placeholder,
-input[type="tel"]::placeholder {
-    color: #b2bec3;
 }
 
 button {
@@ -113,7 +106,6 @@ button:hover {
     color: #2c3e50;
 }
 
-/* Header for resume */
 .resume-header {
     display: flex;
     align-items: center;
@@ -140,7 +132,6 @@ button:hover {
     color: #2c3e50;
 }
 
-/* Each section of the resume */
 .resume-section {
     margin-top: 1.5rem;
     padding: 1rem;
@@ -164,7 +155,7 @@ button:hover {
     margin: 0.5rem 0;
 }
 
-/* Styling for form sections and items */
+/* Form Sections */
 .section {
     margin-top: 1.5rem;
     padding: 1rem;
@@ -180,7 +171,7 @@ button:hover {
     margin-bottom: 1rem;
 }
 
-/* Styling for year fields below main input */
+/* Year Fields */
 .education-year,
 .experience-year {
     margin-top: 0.5rem;
@@ -195,9 +186,17 @@ button:hover {
 /* Responsive Design */
 @media (max-width: 768px) {
     .container {
-        width: 90%;
+        width: 95%;
         margin: 1rem auto;
         padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
     }
 
     .resume-header {
@@ -211,12 +210,17 @@ button:hover {
     }
 
     .education-item,
-    .experience-item {
+    .experience-item,
+    .skills-item {
         display: block;
     }
 
     .education-year,
     .experience-year {
         text-align: left;
+    }
+
+    .submit-btn {
+        font-size: 1rem;
     }
 }
